@@ -18,3 +18,28 @@ block {
 h1 {
     font-family: 'Rowdies', cursive;
   }
+
+
+
+
+
+
+  #container {
+    margin: 0 auto;
+    width: 100%;
+}
+#container .row {
+    /* Access rows */
+}
+#container .row .col {
+    float: left;
+    width: 50%;
+}
+/* Equivalent of #column-1*/
+#container .row .col.column-1 {
+
+}
+/* Equivalent of #column-2 */
+#container .row .col.column-2 {
+
+}
