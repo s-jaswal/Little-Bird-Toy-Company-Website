@@ -7,6 +7,7 @@ block {
     display: flex;
     flex-direction: column;
     align-items: center;
+        font-family: 'Rowdies', cursive;
 }
 
 .block p {
@@ -19,9 +20,37 @@ h1 {
     font-family: 'Rowdies', cursive;
   }
 
+  h2 {
+    font-family: 'Rowdies', cursive;
+  }
 
+  h3 {
+    font-family: 'Rowdies', cursive;
+  }
 
+  h4 {
+    font-family: 'Rowdies', cursive;
+  }
 
+  p {
+    font-family: 'Rowdies', cursive;
+  }
+
+  strong {
+    font-family: 'Rowdies', cursive;
+  }
+
+  div {
+    font-family: 'Rowdies', cursive;
+  }
+
+  footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to bottom, white, black); /* Gradient from black to dark gray */
+    color: white;
+}
 
 
   #container {
@@ -43,3 +72,29 @@ h1 {
 #container .row .col.column-2 {
 
 }
+
+/* centering the our story part */
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this according to your layout */
+}
+/* centering the our story part end */
+
+
+/* for the established in 2018 part */
+.highlight {
+    font-weight: bold;
+    font-size: 1.5em; /* Adjust the size as needed */
+    margin-top: 120px;
+}
+/* for the established in 2018 part end */
+
+
+/* bigger text for our story info start */
+.bigger-text {
+    font-size: 1.2em; /* Adjust the size as needed */
+    margin-top: 600px;
+}
+/* bigger text for our story info end */ 
