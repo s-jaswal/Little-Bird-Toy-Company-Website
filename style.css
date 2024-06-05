@@ -18,6 +18,7 @@ block {
 
 h1 {
     font-family: 'Rowdies', cursive;
+    
   }
 
   h2 {
@@ -48,10 +49,31 @@ h1 {
     width: 100%;
     text-align: center;
     padding: 10px;
-    background: linear-gradient(to bottom, white, black); /* Gradient from black to dark gray */
+    background: linear-gradient(to bottom, white, gray); /* Gradient from black to dark gray */
     color: white;
 }
 
+#container2 {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: white; /* Background color for the container */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+#container3 {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+#container4 {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
 
   #container {
     margin: 0 auto;
@@ -87,7 +109,8 @@ h1 {
 .highlight {
     font-weight: bold;
     font-size: 1.5em; /* Adjust the size as needed */
-    margin-top: 120px;
+    margin-top: 50px;
+    padding: 50px;
 }
 /* for the established in 2018 part end */
 
@@ -98,3 +121,25 @@ h1 {
     margin-top: 600px;
 }
 /* bigger text for our story info end */ 
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.column-1 {
+  flex: 1;
+  background-color:rgb(247, 179, 90); /* Background color for the first column */
+  padding: 300px; /* Add some padding for spacing */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  size: 100px;
+}
+
+.column-2 {
+  flex: 1;
+  background-color: rgb(102, 50, 50); /* Background color for the second column */
+  padding: 300px; /* Add some padding for spacing */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

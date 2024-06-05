@@ -111,3 +111,56 @@ function generateTeamCards() {
 }
 
 window.onload = generateTeamCards;
+
+
+// reveiw data
+
+const teamMembers = [
+  {
+    name: 'George Washington',
+    age: 67,
+    alive: false,
+    party: 'Non-Applicable',
+    biography:
+      'First President, led Revolutionary War.',
+      image: 'imgs/GW-300x300.png'
+  },
+  {
+    name: 'Thomas Jefferson',
+    age: 83 ,
+    alive: false,
+    party: 'Democrat',
+    biography:
+      'Wrote Declaration of Independence.',
+      image: 'imgs/TJ-300x300.png'
+  },
+  {
+    name: 'Abraham Lincoln',
+    age: 56,
+    alive: false,
+    party: 'Republican',
+    biography:
+      'Led during Civil War, abolished slavery.',
+      image: 'imgs/AL-300x300.png'
+  
+  }
+  
+
+    
+
+    card.innerHTML = `
+            <div class="card">
+                <div class = "card-header">
+                    ${member.name}
+                </div>
+
+                <div id="cardBody" class="card-body"
+                <p><strong>Age:</strong> ${member.score}</p>
+            </div>
+
+            <div id="cardBody" class="card-body"
+            <p><strong>Alive:</strong> ${member.alive}</p>
+        </div>
+
+            </div>
+        `
