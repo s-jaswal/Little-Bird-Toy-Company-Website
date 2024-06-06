@@ -108,32 +108,33 @@ h1 {
 /* for the established in 2018 part */
 .highlight {
     font-weight: bold;
-    font-size: 1.5em; /* Adjust the size as needed */
-    margin-top: 50px;
-    padding: 50px;
+    font-size: 1.9em; /* Adjust the size as needed */
+    margin-top: 80px; 
 }
 /* for the established in 2018 part end */
 
 
 /* bigger text for our story info start */
 .bigger-text {
-    font-size: 1.2em; /* Adjust the size as needed */
-    margin-top: 600px;
+    font-size: 1.6em; /* Adjust the size as needed */
+    margin-top: 10px;
 }
 /* bigger text for our story info end */ 
 
 .row {
   display: flex;
   width: 100%;
+  margin-top:90px;
 }
 
-.column-1 {
+.column-1 { 
   flex: 1;
   background-color:rgb(247, 179, 90); /* Background color for the first column */
   padding: 300px; /* Add some padding for spacing */
   margin-top: 100px;
   margin-bottom: 100px;
   size: 100px;
+  
 }
 
 .column-2 {
@@ -142,4 +143,10 @@ h1 {
   padding: 300px; /* Add some padding for spacing */
   margin-top: 100px;
   margin-bottom: 100px;
+  color:white;
+}
+
+img {
+  height:20px;
+  width:20px;
 }
