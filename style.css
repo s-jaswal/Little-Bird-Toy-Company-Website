@@ -67,6 +67,7 @@ h1 {
   margin: 0 auto;
   width: 100%;
   text-align: center;
+  margin-bottom: 0;
 }
 
 #container4 {
@@ -75,10 +76,6 @@ h1 {
   text-align: center;
 }
 
-  #container {
-    margin: 0 auto;
-    width: 100%;
-}
 #container .row {
     /* Access rows */
 }
@@ -149,4 +146,62 @@ h1 {
 img {
   height:20px;
   width:20px;
+}
+
+/* Style for the footer section */
+.section.footer {
+  background-color: black;
+  color:white;
+  padding: 200px 0;
+  margin-top: 0;
+  font-size:20px;
+}
+
+/* Style for the container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Style for the flexbox */
+.flexbox-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style for the gap between items */
+.gap-75 > * {
+  margin-right: 75px;
+}
+
+/* Style for wrapping items */
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* Style for the footer menu wrappers */
+.footer-menu-wrapper_1,
+.footer-menu-wrapper_2,
+.footer-menu-wrapper_3,
+.footer-menu-wrapper_4 {
+  flex-basis: calc(25% - 75px); /* 25% width with 75px gap */
+}
+
+/* Style for the footer title */
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the footer links */
+.footer-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-link:hover {
+  color: orange;
 }
