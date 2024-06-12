@@ -114,53 +114,41 @@ window.onload = generateTeamCards;
 
 
 // reveiw data
-
-const teamMembers = [
+const customerReviews = [
   {
-    name: 'George Washington',
-    age: 67,
-    alive: false,
-    party: 'Non-Applicable',
-    biography:
-      'First President, led Revolutionary War.',
-      image: 'imgs/GW-300x300.png'
+    reviewer: 'Terry Richardson',
+    score: '⭐⭐⭐⭐⭐',
+    recommended: 'Yes!',
+    feedback: 'Beautifully crafted wooden puzzle! Safe, eco-friendly, and perfect for my toddler. Highly recommend!',
   },
   {
-    name: 'Thomas Jefferson',
-    age: 83 ,
-    alive: false,
-    party: 'Democrat',
-    biography:
-      'Wrote Declaration of Independence.',
-      image: 'imgs/TJ-300x300.png'
+    reviewer: 'Jeremy Fitzgerald',
+    score: '⭐⭐⭐⭐',
+    recommended: 'Definitely!',
+    feedback: 'Love the wooden train set! Durable, detailed, and a big hit with my kids. Excellent craftsmanship!',
   },
   {
-    name: 'Abraham Lincoln',
-    age: 56,
-    alive: false,
-    party: 'Republican',
-    biography:
-      'Led during Civil War, abolished slavery.',
-      image: 'imgs/AL-300x300.png'
-  
+    reviewer: 'Lucy MacClean',
+    score: '⭐⭐⭐⭐⭐',
+    recommended: 'Absolutely!',
+    feedback: 'Fantastic wooden building blocks! Sturdy, smooth, and fun. Gorgeous natural wood finish. Will buy again!',
   }
-  
+]
 
-    
+customerReviews.forEach(review => {
+  const card = document.createElement('div');
+  card.innerHTML = `
+    <div class="card">
+      <div class="card-header">
+        ${review.reviewer}
+      </div>
+      <div id="cardBody" class="card-body">
+        <p><strong>Score:</strong> ${review.score}</p>
+        <p><strong>Recommended:</strong> ${review.recommended}</p>
+        <p><strong>Feedback:</strong> ${review.feedback}</p>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(card);
+});
 
-    card.innerHTML = `
-            <div class="card">
-                <div class = "card-header">
-                    ${member.name}
-                </div>
-
-                <div id="cardBody" class="card-body"
-                <p><strong>Age:</strong> ${member.score}</p>
-            </div>
-
-            <div id="cardBody" class="card-body"
-            <p><strong>Alive:</strong> ${member.alive}</p>
-        </div>
-
-            </div>
-        `
