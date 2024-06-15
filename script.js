@@ -1,154 +1,351 @@
-const teamMembers = [
+// Generate object cards
+
+const products = [
   {
-    name: 'Wooden Airplane (Age: Toddlers):',
-    imageURL: 'product images/plane1.jpg',
-    activelyPlaying: true,
-    type: 'Learning Machine',
-    skills: ['Processing information', 'Solving problems', 'Adapting to new situations'],
-    strengths: 'Making complex connections',
-    weaknesses: 'Susceptible to injury',
-    biography: 'The brain is the most complex organ in the human body. It controls everything we do, from thinking and feeling to moving and learning.'
+    name: "Blocks",
+    rating: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating</title>
+    <style>
+        .checked {
+            color: orange;
+        }
+         .star-rating {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .fa-star {
+            margin: 0 -2px;
+            padding: 0 1px; 
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+    </div>
+
+</body>
+</html>
+`,
+    price: "$9.99",
+    images: ["images/block1.jpg", "images/block4.jpg", "images/block5.jpg",],
+    id: "toy1",
+    description: "Vibrant building blocks that spark creativity and enhance fine motor skills in children.",
+    ageRange: "2-3",
   },
   {
-    name: 'Wooden Train Set (Age: 3+):',
-    imageURL: 'product images/train1.jpg',
-    type: 'Vital Organ',
-    skills: ['Pumping blood', 'Regulating Blood Flow', 'Sending electrical signals'],
-    strengths: 'Endurance',
-    weaknesses: 'Can be affected by stress',
-    biography: 'The heart is a muscular organ that plays a vital role in the circulator system.It pumps blood throughout the body, delivering oxygen and nutrients to cells and removing waste products.'
+    name: "Plane",
+    rating: "5",
+    price: "$4.99",
+    ageRange: "4-7",
+    images: ["images/plane3.jpg", "images/plane1.jpg", "images/plane2.jpg"],
+    id: "toy2",
+    description: "Sleek model airplane perfect for aviation enthusiasts and imaginative play.",
+    rating: `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Font Awesome Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Star Rating</title>
+        <style>
+            .checked {
+                color: orange;
+            }
+             .star-rating {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .fa-star {
+                margin: 0 -2px;
+                padding: 0 1px; 
+            }
+        </style>
+    </head>
+    <body>
+    
+        
+        <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </div>
+    
+    </body>
+    </html>
+    `
   },
   {
-    name: 'Wooden Boat (Age: All ages):',
-    imageURL: '',
-    type: 'Respiratory Organ',
-    skills: ['Gas exchange', 'Breathing', 'Maintaining Plood PH'],
-    strengths: 'Adaptability',
-    weaknesses: 'Poluution and Smoke',
-    biography: 'The lungs are a pair of spongy organs that play a vital role in respiration. They take oxygen from the air we breather and release carbon dioxide, a waste product, from our bodies.'
+    name: "Car",
+    rating: "5",
+    price: "$9.99",
+    ageRange: "2-8",
+    images: ["images/car2.jpg", "images/car3.jpg", "images/car1.jpg",],
+    id: "toy3",
+    description: "Stylish toy car ready for thrilling races and adventurous journeys for young kids.",
+    rating: `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Font Awesome Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Star Rating</title>
+        <style>
+            .checked {
+                color: orange;
+            }
+             .star-rating {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .fa-star {
+                margin: 0 -2px;
+                padding: 0 1px; 
+            }
+        </style>
+    </head>
+    <body>
+    
+        
+        <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </div>
+    
+    </body>
+    </html>
+    `,
+
   },
   {
-    name: 'Wooden Block Set (Age: 3+):',
-    imageURL: '',
-    type: 'Excretory Organ',
-    skills: ['Filtering blood', 'Removing waste', 'Maintaining water balance'],
-    strengths: 'Filtration',
-    weaknesses: 'Disease and Toxins',
-    biography: 'The Kidneys are two bean-shaped organs that play a vital role in the excretory system. They filter waste products from the blood, regulate body fluids, and produce hormones.'
+    name: "Boat",
+    rating: "5",
+    price: "$12.99",
+    ageRange: "2-6",
+    images: ["images/boat3.jpg", "images/boat1.jpg", "images/boat2.jpg",],
+    id: "toy4",
+    description: "Detailed, buoyant toy boat ideal for exciting water play and nautical adventures.",
+    rating: `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Font Awesome Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Star Rating</title>
+        <style>
+            .checked {
+                color: orange;
+            }
+             .star-rating {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .fa-star {
+                margin: 0 -2px;
+                padding: 0 1px; 
+            }
+        </style>
+    </head>
+    <body>
+    
+        
+        <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+    
+    </body>
+    </html>
+    `
   },
   {
-    name: 'Wooden Car (All ages): ',
-    imageURL: '',
-    type: 'Digestive Organ',
-    skills: ['Filtering blood', 'Processing nutrients', 'Making proteins'],
-    strengths: 'Essential for metabolism and Nutrient storage',
-    weaknesses: 'Injury and Toxins',
-    biography: 'The liver is the largest and most complex organ in the body. It plays a vital role in digestion, metabolism, and detoxification. The liver filters harmful substances from the blood and processes nutrients from food. '
+    name: "Train 1",
+    rating: "5",
+    price: "$14.99",
+    ageRange: "4-10",
+    images: ["images/train5.jpg", "images/train2.jpg", "images/train3.jpg",],
+    id: "toy5",
+    description: "Classic wooden train set with vibrant colors, perfect for imaginative play and developing fine motor skills.",
+    rating: `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Font Awesome Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Star Rating</title>
+        <style>
+            .checked {
+                color: orange;
+            }
+             .star-rating {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .fa-star {
+                margin: 0 -2px;
+                padding: 0 1px; 
+            }
+        </style>
+    </head>
+    <body>
+    
+        
+        <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </div>
+    
+    </body>
+    </html>
+    `
   },
   {
-    name: 'Wooden Car (All ages): ',
-    imageURL: '',
-    type: 'Digestive Organ',
-    skills: ['Filtering blood', 'Processing nutrients', 'Making proteins'],
-    strengths: 'Essential for metabolism and Nutrient storage',
-    weaknesses: 'Injury and Toxins',
-    biography: 'The liver is the largest and most complex organ in the body. It plays a vital role in digestion, metabolism, and detoxification. The liver filters harmful substances from the blood and processes nutrients from food. '
-  },
-  
+    name: "Train 2",
+    rating: "5",
+    price: "$19.99",
+    ageRange: "4-10",
+    images: ["images/train7.jpg", "images/train1.jpg", "images/train6.jpg"],
+    id: "toy6",
+    description: "Modern electric train with realistic sounds and lights, offering an engaging experience for young engineers.",
+
+    rating: `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Font Awesome Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Star Rating</title>
+        <style>
+            .checked {
+                color: orange;
+            }
+             .star-rating {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .fa-star {
+                margin: 0 -2px;
+                padding: 0 1px; 
+            }
+        </style>
+    </head>
+    <body>
+    
+        
+        <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </div>
+    
+    </body>
+    </html>
+    ` }
 ];
 
-function generateTeamCards() {
-  const teamCardsContainer = document.getElementById('teamCards');
 
-  teamMembers.forEach(member => {
-    const card = document.createElement('div');
-    card.classList.add('col-md-4');
+function generateProductCards() {
+  const productCardsContainer = document.getElementById("card");
 
-    // Styling card based on position:
-    let backgroundColor;
-
-    switch (member.type.toLowerCase()) {
-      case 'color fairy':
-        backgroundColor = '#ffc107'; 
-        break;
-      case 'animal fairy':
-        backgroundColor = '#28a745'; 
-      case 'flower fairy':
-        backgroundColor = '#007bff'; 
-        break;
-      case 'talent fairy':
-        backgroundColor = '#dc3545'; 
-        break;
-      default:
-        backgroundColor = '#800080'; 
-    }
-    card.style.backgroundColor = backgroundColor;
-
-    // Create a list of Skills with <li> tags
-    const skillsList = member.skills
-      .map(skill => `<li>${skill}</li>`).join('');
+  products.forEach((product) => {
+    const card = document.createElement("div");
+    card.classList.add("col-lg-4");
+    card.classList.add("col-md-6");
+    card.classList.add("col-sm-12");
+    card.classList.add("mt-3");
+    card.classList.add("h-100");
 
     card.innerHTML = `
-          <div class="card">
-              <img src="${member.imageURL}" class="img-fluid team-member-image" alt="${member.name}">
-              <div class="card-header">${member.name}</div>
-              <div class="card-body">
-                  <p><strong>Type:</strong> ${member.type}</p>
-                  <p><strong>Skills:</strong> 
-                      <ul>
-                          ${skillsList}
-                      </ul>
-                  </p>
-                  <p><strong>Strengths:</strong> ${member.strengths}</p>
-                  <p><strong>Weaknesses:</strong> ${member.weaknesses}</p>
-                  <p><strong>Biography:</strong> ${member.biography}</p>
-              </div>
-          </div>
-      `;
+            <div class="card border bcolor rounded">
+            
 
-    teamCardsContainer.appendChild(card);
+
+
+
+
+            <div = class="card-img-top">
+            <div id="${product.id}" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#${product.id}" data-bs-slide-to="0" class="active indicolors" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#${product.id}" data-bs-slide-to="1" class= "indicolors" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#${product.id}" data-bs-slide-to="2" class= "indicolors" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="imgsize" src ="${product.images[0]}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="imgsize" src="${product.images[1]}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="imgsize" src = "${product.images[2]}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          
+           
+          </div>
+
+            </div>
+
+
+
+
+
+
+
+
+                <div class="card-header color" style="background-color: #7F5539;"> 
+                    ${product.name} 
+                </div>
+                <div class="card-body" style="background-color: ;">
+                    
+                    <p>Rating: ${product.rating}</p>
+                    <p>price: ${product.price}</p>
+                    <p>Description: ${product.description}</p>
+                   <p>Age Range: ${product.ageRange}</p>
+                </div>
+            </div>
+        `;
+
+    productCardsContainer.appendChild(card);
   });
 }
 
-window.onload = generateTeamCards;
-
-
-// reveiw data
-const customerReviews = [
-  {
-    reviewer: 'Terry Richardson',
-    score: '⭐⭐⭐⭐⭐',
-    recommended: 'Yes!',
-    feedback: 'Beautifully crafted wooden puzzle! Safe, eco-friendly, and perfect for my toddler. Highly recommend!',
-  },
-  {
-    reviewer: 'Jeremy Fitzgerald',
-    score: '⭐⭐⭐⭐',
-    recommended: 'Definitely!',
-    feedback: 'Love the wooden train set! Durable, detailed, and a big hit with my kids. Excellent craftsmanship!',
-  },
-  {
-    reviewer: 'Lucy MacClean',
-    score: '⭐⭐⭐⭐⭐',
-    recommended: 'Absolutely!',
-    feedback: 'Fantastic wooden building blocks! Sturdy, smooth, and fun. Gorgeous natural wood finish. Will buy again!',
-  }
-]
-
-customerReviews.forEach(review => {
-  const card = document.createElement('div');
-  card.innerHTML = `
-    <div class="card">
-      <div class="card-header">
-        ${review.reviewer}
-      </div>
-      <div id="cardBody" class="card-body">
-        <p><strong>Score:</strong> ${review.score}</p>
-        <p><strong>Recommended:</strong> ${review.recommended}</p>
-        <p><strong>Feedback:</strong> ${review.feedback}</p>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(card);
-});
+window.onload = generateProductCards;
 
