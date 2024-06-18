@@ -42,7 +42,7 @@ const products = [
   `,
         name: "Train",
         price: "$9.99",
-        images: ["product images/train1.jpg"],
+        images: ["product images/train1.jpg", "product images/train5.jpg", "product images/train7.jpg"],
         id: "toy1",
         description: " Embark on a charming journey with this beautiful handcrafted wooden train set. Engine and three interchangeable cars boast intricate details made from real beech wood.",
         ageRange: "3+",
@@ -52,7 +52,7 @@ const products = [
         rating: "5",
         price: "$4.99",
         ageRange: "Toddlers",
-        images: ["product images/plane1.jpg"],
+        images: ["product images/plane1.jpg", "product images/plane3.jpg", "product images/plane2.jpg"],
         id: "toy2",
         description: "Soar through imaginative skies with this classic wooden airplane. Handcrafted from sustainable Baltic birch wood with a safe, natural harvest finish and a spinning propeller.",
         rating: `<!DOCTYPE html>
@@ -98,7 +98,7 @@ const products = [
         rating: "5",
         price: "$9.99",
         ageRange: "All Ages",
-        images: ["product images/wooden car.jpg",],
+        images: ["product images/wooden car.jpg", "product images/car2.jpg", "product images/car4.jpg"],
         id: "toy3",
         description: "Stylish toy car ready for thrilling races and adventurous journeys for young kids.",
         rating: `<!DOCTYPE html>
@@ -145,7 +145,7 @@ const products = [
         rating: "5",
         price: "$12.99",
         ageRange: "All ages",
-        images: ["product images/boat2.jpg",],
+        images: ["product images/boat2.jpg", "product images/boat9.webp", "product images/boat10.jpg"],
         id: "toy4",
         description: "Set sail for bathtub adventures with this adorable wooden boat. Made from solid Maine white pine, this handcrafted toy floats and features rounded edges for safety.",
         rating: `<!DOCTYPE html>
@@ -191,7 +191,7 @@ const products = [
         rating: "5",
             price: "$67.99",
                 ageRange: "3+",
-                    images: ["product images/wbs.jpg",],
+                    images: ["product images/wbs.jpg","product images/wbs8.jpg", "product images/wbs11.avif"],
                         id: "toy5",
                             description: "Build creativity and imagination with this high-quality, 72-piece block set. Made from naturally finished and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate (13” L x 12” W x 2” H).",
                                 rating: `<!DOCTYPE html>
@@ -237,7 +237,7 @@ const products = [
         rating: "5",
             price: "$9.00",
                 ageRange: "1+",
-                    images: ["product images/wooden duck.webp"],
+                    images: ["product images/wooden duck.webp", "product images/wdt88.webp", "product images/wdts66.jpg"],
                         id: "toy6",
                             description: "The wooden duck toy is a charming and durable play companion for young children. Handcrafted from smooth, natural wood, it features vibrant colors and a friendly design that sparks imaginative play.",
 
