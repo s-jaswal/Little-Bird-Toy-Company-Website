@@ -146,8 +146,8 @@ h1 {
 }
 
 img {
-  height:20px;
-  width:20px;
+  max-width: 100%; /* This limits the image size to its container */
+  height: auto; /* Ensures the image keeps its aspect ratio */
 }
 
 /* Style for the contact us section */
@@ -244,6 +244,7 @@ a:hover {
   margin: 20px;
   list-style-type: none;
   display: inline-block;
+  color: black;
 }
 
 
@@ -622,3 +623,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 
 /* cards css end */
 
+/* reviews color title*/
+.orange {
+  color:rgb(211, 147, 29);
+  font-style: italic; 
+}

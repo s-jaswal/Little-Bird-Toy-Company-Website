@@ -2,8 +2,8 @@
 
 const products = [
     {
-      name: "Blocks",
-      rating: `<!DOCTYPE html>
+        name: "Blocks",
+        rating: `<!DOCTYPE html>
   <html lang="en">
   <head>
       <!-- Font Awesome Icon Library -->
@@ -40,21 +40,22 @@ const products = [
   </body>
   </html>
   `,
-      price: "$9.99",
-      images: ["product images/train1.jpg"],
-      id: "toy1",
-      description: "Vibrant building blocks that spark creativity and enhance fine motor skills in children.",
-      ageRange:"2-3",
+        name: "Train",
+        price: "$9.99",
+        images: ["product images/train1.jpg"],
+        id: "toy1",
+        description: " Embark on a charming journey with this beautiful handcrafted wooden train set. Engine and three interchangeable cars boast intricate details made from real beech wood.",
+        ageRange: "3+",
     },
     {
-      name: "Plane",
-      rating: "5",
-      price: "$4.99",
-      ageRange:"4-7",
-      images: ["images/plane3.jpg","images/plane1.jpg","images/plane2.jpg"],
-      id: "toy2",
-      description: "Sleek model airplane perfect for aviation enthusiasts and imaginative play.",
-      rating: `<!DOCTYPE html>
+        name: "Plane",
+        rating: "5",
+        price: "$4.99",
+        ageRange: "Toddlers",
+        images: ["product images/plane1.jpg"],
+        id: "toy2",
+        description: "Soar through imaginative skies with this classic wooden airplane. Handcrafted from sustainable Baltic birch wood with a safe, natural harvest finish and a spinning propeller.",
+        rating: `<!DOCTYPE html>
       <html lang="en">
       <head>
           <!-- Font Awesome Icon Library -->
@@ -93,14 +94,14 @@ const products = [
       `
     },
     {
-      name: "Car",
-      rating: "5",
-      price: "$9.99",
-      ageRange:"2-8",
-      images: ["images/car2.jpg","images/car3.jpg","images/car1.jpg",],
-      id: "toy3",
-      description: "Stylish toy car ready for thrilling races and adventurous journeys for young kids.",
-      rating: `<!DOCTYPE html>
+        name: "Car",
+        rating: "5",
+        price: "$9.99",
+        ageRange: "All Ages",
+        images: ["product images/wooden car.jpg",],
+        id: "toy3",
+        description: "Stylish toy car ready for thrilling races and adventurous journeys for young kids.",
+        rating: `<!DOCTYPE html>
       <html lang="en">
       <head>
           <!-- Font Awesome Icon Library -->
@@ -137,17 +138,17 @@ const products = [
       </body>
       </html>
       `,
-      
+
     },
     {
-      name: "Boat",
-      rating: "5",
-      price: "$12.99",
-      ageRange:"2-6",
-      images: ["images/boat3.jpg","images/boat1.jpg","images/boat2.jpg",],
-      id: "toy4",
-      description: "Detailed, buoyant toy boat ideal for exciting water play and nautical adventures.",
-      rating: `<!DOCTYPE html>
+        name: "Boat",
+        rating: "5",
+        price: "$12.99",
+        ageRange: "All ages",
+        images: ["product images/boat2.jpg",],
+        id: "toy4",
+        description: "Set sail for bathtub adventures with this adorable wooden boat. Made from solid Maine white pine, this handcrafted toy floats and features rounded edges for safety.",
+        rating: `<!DOCTYPE html>
       <html lang="en">
       <head>
           <!-- Font Awesome Icon Library -->
@@ -185,15 +186,15 @@ const products = [
       </html>
       `
     },
-    {
-      name: "Train 1",
-      rating: "5",
-      price: "$14.99",
-      ageRange:"4-10",
-      images: ["images/train5.jpg","images/train2.jpg","images/train3.jpg",],
-      id: "toy5",
-      description: "Classic wooden train set with vibrant colors, perfect for imaginative play and developing fine motor skills.",
-      rating: `<!DOCTYPE html>
+{
+    name: "Wooden Block Set",
+        rating: "5",
+            price: "$67.99",
+                ageRange: "3+",
+                    images: ["product images/wbs.jpg",],
+                        id: "toy5",
+                            description: "Build creativity and imagination with this high-quality, 72-piece block set. Made from naturally finished and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate (13” L x 12” W x 2” H).",
+                                rating: `<!DOCTYPE html>
       <html lang="en">
       <head>
           <!-- Font Awesome Icon Library -->
@@ -230,17 +231,17 @@ const products = [
       </body>
       </html>
       `
-    },
-    {
-      name: "Train 2",
-      rating: "5",
-      price: "$19.99",
-      ageRange:"4-10",
-      images: ["images/train7.jpg","images/train1.jpg","images/train6.jpg"],
-      id: "toy6",
-      description: "Modern electric train with realistic sounds and lights, offering an engaging experience for young engineers.",
-   
-      rating: `<!DOCTYPE html>
+},
+{
+    name: "Wooden Duck",
+        rating: "5",
+            price: "$9.00",
+                ageRange: "1+",
+                    images: ["product images/wooden duck.webp"],
+                        id: "toy6",
+                            description: "The wooden duck toy is a charming and durable play companion for young children. Handcrafted from smooth, natural wood, it features vibrant colors and a friendly design that sparks imaginative play.",
+
+                                rating: `<!DOCTYPE html>
       <html lang="en">
       <head>
           <!-- Font Awesome Icon Library -->
@@ -277,21 +278,26 @@ const products = [
       </body>
       </html>
       ` }
-  ];
-  
-  
-  function generateProductCards() {
+];
+
+
+
+
+
+
+
+function generateProductCards() {
     const productCardsContainer = document.getElementById("card");
-  
+
     products.forEach((product) => {
-      const card = document.createElement("div");
-      card.classList.add("col-lg-4");
-      card.classList.add("col-md-6");
-      card.classList.add("col-sm-12");
-      card.classList.add("mt-3");
-      card.classList.add("h-100");
-  
-      card.innerHTML = `
+        const card = document.createElement("div");
+        card.classList.add("col-lg-4");
+        card.classList.add("col-md-6");
+        card.classList.add("col-sm-12");
+        card.classList.add("mt-3");
+        card.classList.add("h-100");
+
+        card.innerHTML = `
               <div class="card border bcolor rounded">
               
   
@@ -342,453 +348,453 @@ const products = [
                   </div>
               </div>
           `;
-  
-      productCardsContainer.appendChild(card);
+
+        productCardsContainer.appendChild(card);
     });
-  }
-  
-  window.onload = generateProductCards;
-  
-  
-  
+}
+
+window.onload = generateProductCards;
+
+
+
 
 
 /*----------------------------------------------------------------------------------------------------------------------*/
 /* book an appointment script start */
-$(document).ready(function() {
-  
+$(document).ready(function () {
+
     /*============================================
     Page Preloader
     ==============================================*/
-    
-    $(window).load(function(){
-      $('#page-loader').fadeOut(500,function(){
-        loadGmap();
-      });
-      
-    })  
-    
+
+    $(window).load(function () {
+        $('#page-loader').fadeOut(500, function () {
+            loadGmap();
+        });
+
+    })
+
     /*============================================
     Header
     ==============================================*/
-    
-    $('#home').height($(window).height()+50);
-    
+
+    $('#home').height($(window).height() + 50);
+
     $.backstretch('assets/images/header-bg.jpg');
-    
-    $(window).scroll( function() {
-      var st = $(this).scrollTop(),
-        wh = $(window).height(),
-        sf = 1.2 - st/(10*wh);
-      
-      $('.backstretch img').css({ 
-        'transform' : 'scale('+sf+')', 
-        '-webkit-transform' : 'scale('+sf+')'
-      });
-      
-      $('#home .container').css({ 'opacity' : (1.4 - st/400) });
-      
-      if($(window).scrollTop() > ($(window).height()+50)){
-        $('.backstretch').hide();
-      }else{
-        $('.backstretch').show();
-      }
-      
+
+    $(window).scroll(function () {
+        var st = $(this).scrollTop(),
+            wh = $(window).height(),
+            sf = 1.2 - st / (10 * wh);
+
+        $('.backstretch img').css({
+            'transform': 'scale(' + sf + ')',
+            '-webkit-transform': 'scale(' + sf + ')'
+        });
+
+        $('#home .container').css({ 'opacity': (1.4 - st / 400) });
+
+        if ($(window).scrollTop() > ($(window).height() + 50)) {
+            $('.backstretch').hide();
+        } else {
+            $('.backstretch').show();
+        }
+
     });
-    
+
     var st = $(this).scrollTop(),
-      wh = $(window).height(),
-      sf = 1.2 - st/(10*wh);
-  
-    $('.backstretch img').css({ 
-      'transform' : 'scale('+sf+')', 
-      '-webkit-transform' : 'scale('+sf+')'
+        wh = $(window).height(),
+        sf = 1.2 - st / (10 * wh);
+
+    $('.backstretch img').css({
+        'transform': 'scale(' + sf + ')',
+        '-webkit-transform': 'scale(' + sf + ')'
     });
-  
-    $('#home .container').css({ 'opacity' : (1.4 - st/400) });
-  
-    
+
+    $('#home .container').css({ 'opacity': (1.4 - st / 400) });
+
+
     /*============================================
     Navigation Functions
     ==============================================*/
-    if ($(window).scrollTop()< ($(window).height()-50)){
-      $('#main-nav').removeClass('scrolled');
-    }
-    else{
-      $('#main-nav').addClass('scrolled');    
-    }
-  
-    $(window).scroll(function(){
-      if ($(window).scrollTop()< ($(window).height()-50)){
+    if ($(window).scrollTop() < ($(window).height() - 50)) {
         $('#main-nav').removeClass('scrolled');
-      }
-      else{
-        $('#main-nav').addClass('scrolled');    
-      }
+    }
+    else {
+        $('#main-nav').addClass('scrolled');
+    }
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() < ($(window).height() - 50)) {
+            $('#main-nav').removeClass('scrolled');
+        }
+        else {
+            $('#main-nav').addClass('scrolled');
+        }
     });
-    
+
     /*============================================
     ScrollTo Links
     ==============================================*/
-    $('a.scrollto').click(function(e){
-      $('html,body').scrollTo(this.hash, this.hash, {gap:{y:-70}});
-      e.preventDefault();
-  
-      if ($('.navbar-collapse').hasClass('in')){
-        $('.navbar-collapse').removeClass('in').addClass('collapse');
-      }
+    $('a.scrollto').click(function (e) {
+        $('html,body').scrollTo(this.hash, this.hash, { gap: { y: -70 } });
+        e.preventDefault();
+
+        if ($('.navbar-collapse').hasClass('in')) {
+            $('.navbar-collapse').removeClass('in').addClass('collapse');
+        }
     });
-  
+
     /*============================================
     Skills
     ==============================================*/
-    $('.skills-item').each(function(){
-      var perc = $(this).find('.percent').data('percent');
-  
-      $(this).data('height',perc);
+    $('.skills-item').each(function () {
+        var perc = $(this).find('.percent').data('percent');
+
+        $(this).data('height', perc);
     })
-    
-    $('.touch .skills-item').each(function(){
-      $(this).css({'height':$(this).data('height')+'%'});
+
+    $('.touch .skills-item').each(function () {
+        $(this).css({ 'height': $(this).data('height') + '%' });
     })
-    
-    $('.touch .skills-bars').css({'opacity':1});
-      
+
+    $('.touch .skills-bars').css({ 'opacity': 1 });
+
     /*============================================
     Project thumbs - Masonry
     ==============================================*/
-    $(window).load(function(){
-  
-      $('#projects-container').css({visibility:'visible'});
-  
-      $('#projects-container').masonry({
-        itemSelector: '.project-item:not(.filtered)',
-        //columnWidth:370,
-        isFitWidth: true,
-        isResizable: true,
-        isAnimated: !Modernizr.csstransitions,
-        gutterWidth: 25
-      });
-  
-      scrollSpyRefresh();
-      waypointsRefresh();
-      
+    $(window).load(function () {
+
+        $('#projects-container').css({ visibility: 'visible' });
+
+        $('#projects-container').masonry({
+            itemSelector: '.project-item:not(.filtered)',
+            //columnWidth:370,
+            isFitWidth: true,
+            isResizable: true,
+            isAnimated: !Modernizr.csstransitions,
+            gutterWidth: 25
+        });
+
+        scrollSpyRefresh();
+        waypointsRefresh();
+
     });
-    
+
     /*============================================
     Filter Projects
     ==============================================*/
-    $('#filter-works a').click(function(e){
-      e.preventDefault();
-      
-      if($('#project-preview').hasClass('open')){
-        closeProject();
-      }
-      
-      $('#filter-works li').removeClass('active');
-      $(this).parent('li').addClass('active');
-  
-      var category = $(this).attr('data-filter');
-  
-      $('.project-item').each(function(){
-        if($(this).is(category)){
-          $(this).removeClass('filtered');
+    $('#filter-works a').click(function (e) {
+        e.preventDefault();
+
+        if ($('#project-preview').hasClass('open')) {
+            closeProject();
         }
-        else{
-          $(this).addClass('filtered');
-        }
-  
-        $('#projects-container').masonry('reload');
-      });
-  
-      scrollSpyRefresh();
-      waypointsRefresh();
+
+        $('#filter-works li').removeClass('active');
+        $(this).parent('li').addClass('active');
+
+        var category = $(this).attr('data-filter');
+
+        $('.project-item').each(function () {
+            if ($(this).is(category)) {
+                $(this).removeClass('filtered');
+            }
+            else {
+                $(this).addClass('filtered');
+            }
+
+            $('#projects-container').masonry('reload');
+        });
+
+        scrollSpyRefresh();
+        waypointsRefresh();
     });
-    
+
     /*============================================
     Project Preview
     ==============================================*/
-    $('.project-item').click(function(e){
-      e.preventDefault();
-  
-      var elem = $(this),
-        title = elem.find('.project-title').text(),
-        descr = elem.find('.project-description').html(),
-        slidesHtml = '<ul class="slides">',
-        elemDataCont = elem.find('.project-description');
-  
+    $('.project-item').click(function (e) {
+        e.preventDefault();
+
+        var elem = $(this),
+            title = elem.find('.project-title').text(),
+            descr = elem.find('.project-description').html(),
+            slidesHtml = '<ul class="slides">',
+            elemDataCont = elem.find('.project-description');
+
         slides = elem.find('.project-description').data('images').split(',');
-  
-      for (var i = 0; i < slides.length; ++i) {
-        slidesHtml = slidesHtml + '<li><img src='+slides[i]+' alt=""></li>';
-      }
-      
-      slidesHtml = slidesHtml + '</ul>';
-      
-      $('#project-title').text(title);
-      $('#project-content').html(descr);
-      $('#project-slider').html(slidesHtml);
-      
-      openProject();
-      
+
+        for (var i = 0; i < slides.length; ++i) {
+            slidesHtml = slidesHtml + '<li><img src=' + slides[i] + ' alt=""></li>';
+        }
+
+        slidesHtml = slidesHtml + '</ul>';
+
+        $('#project-title').text(title);
+        $('#project-content').html(descr);
+        $('#project-slider').html(slidesHtml);
+
+        openProject();
+
     });
-  
-    function openProject(){
-      
-      $('#project-preview').addClass('open');
-      $('.masonry-wrapper').animate({'opacity':0},300);
-      
-      setTimeout(function(){
-        $('#project-preview').slideDown();
-        $('.masonry-wrapper').slideUp();
-        
-        $('html,body').scrollTo(0,'#filter-works',
-          {
-            gap:{y:-20},
-            animation:{
-              duration:400
-            }
-        });
-        
-        $('#project-slider').flexslider({
-          prevText: '<i class="fa fa-angle-left"></i>',
-          nextText: '<i class="fa fa-angle-right"></i>',
-          animation: 'slide',
-          slideshowSpeed: 3000,
-          useCSS: true,
-          controlNav: true, 
-          pauseOnAction: false, 
-          pauseOnHover: true,
-          smoothHeight: false,
-          start: function(){
-            $(window).trigger('resize');
-            $('#project-preview').animate({'opacity':1},300);
-          }
-        });
-        
-      },300);
-      
+
+    function openProject() {
+
+        $('#project-preview').addClass('open');
+        $('.masonry-wrapper').animate({ 'opacity': 0 }, 300);
+
+        setTimeout(function () {
+            $('#project-preview').slideDown();
+            $('.masonry-wrapper').slideUp();
+
+            $('html,body').scrollTo(0, '#filter-works',
+                {
+                    gap: { y: -20 },
+                    animation: {
+                        duration: 400
+                    }
+                });
+
+            $('#project-slider').flexslider({
+                prevText: '<i class="fa fa-angle-left"></i>',
+                nextText: '<i class="fa fa-angle-right"></i>',
+                animation: 'slide',
+                slideshowSpeed: 3000,
+                useCSS: true,
+                controlNav: true,
+                pauseOnAction: false,
+                pauseOnHover: true,
+                smoothHeight: false,
+                start: function () {
+                    $(window).trigger('resize');
+                    $('#project-preview').animate({ 'opacity': 1 }, 300);
+                }
+            });
+
+        }, 300);
+
     }
-    
-    function closeProject(){
-    
-      $('#project-preview').removeClass('open');
-      $('#project-preview').animate({'opacity':0},300);
-      
-      setTimeout(function(){
-        $('.masonry-wrapper').slideDown();
-        $('#project-preview').slideUp();
-          
-        $('#project-slider').flexslider('destroy');
-        $('.masonry-wrapper').animate({'opacity':1},300);
-        
-        
-      },300);
-      
-      setTimeout(function(){
-        $('#projects-container').masonry('reload');
-      },500)
+
+    function closeProject() {
+
+        $('#project-preview').removeClass('open');
+        $('#project-preview').animate({ 'opacity': 0 }, 300);
+
+        setTimeout(function () {
+            $('.masonry-wrapper').slideDown();
+            $('#project-preview').slideUp();
+
+            $('#project-slider').flexslider('destroy');
+            $('.masonry-wrapper').animate({ 'opacity': 1 }, 300);
+
+
+        }, 300);
+
+        setTimeout(function () {
+            $('#projects-container').masonry('reload');
+        }, 500)
     }
-    
-    $('.close-preview').click(function(){
-      closeProject();
+
+    $('.close-preview').click(function () {
+        closeProject();
     })
-    
+
     /*============================================
     Twitter
     ==============================================*/
     var tweetsLength = $('#twitter-slider').data('tweets-length'),
-      widgetID = $('#twitter-slider').data('widget-id');
-    
+        widgetID = $('#twitter-slider').data('widget-id');
+
     twitterFetcher.fetch(widgetID, 'twitter-slider', tweetsLength, true, false, true, '', false, handleTweets);
-  
-    function handleTweets(tweets){
-    
-      var x = tweets.length,
-        n = 0,
-        tweetsHtml = '<ul class="slides">';
-        
-      while(n < x) {
-        tweetsHtml += '<li>' + tweets[n] + '</li>';
-        n++;
-      }
-      
-      tweetsHtml += '</ul>';
-      $('#twitter-slider').html(tweetsHtml);
-    
-      $('.twitter_reply_icon').html("<i class='fa fa-reply'></i>");
-      $('.twitter_retweet_icon').html("<i class='fa fa-retweet'></i>");
-      $('.twitter_fav_icon').html("<i class='fa fa-star'></i>");
-      
-      $('#twitter-slider').flexslider({
-        prevText: '<i class="fa fa-angle-left"></i>',
-        nextText: '<i class="fa fa-angle-right"></i>',
-        slideshowSpeed: 5000,
-        useCSS: true,
-        controlNav: false, 
-        pauseOnAction: false, 
-        pauseOnHover: true,
-        smoothHeight: false
-      });
+
+    function handleTweets(tweets) {
+
+        var x = tweets.length,
+            n = 0,
+            tweetsHtml = '<ul class="slides">';
+
+        while (n < x) {
+            tweetsHtml += '<li>' + tweets[n] + '</li>';
+            n++;
+        }
+
+        tweetsHtml += '</ul>';
+        $('#twitter-slider').html(tweetsHtml);
+
+        $('.twitter_reply_icon').html("<i class='fa fa-reply'></i>");
+        $('.twitter_retweet_icon').html("<i class='fa fa-retweet'></i>");
+        $('.twitter_fav_icon').html("<i class='fa fa-star'></i>");
+
+        $('#twitter-slider').flexslider({
+            prevText: '<i class="fa fa-angle-left"></i>',
+            nextText: '<i class="fa fa-angle-right"></i>',
+            slideshowSpeed: 5000,
+            useCSS: true,
+            controlNav: false,
+            pauseOnAction: false,
+            pauseOnHover: true,
+            smoothHeight: false
+        });
     }
     /*============================================
     Contact Map
     ==============================================*/
-    function loadGmap(){
-    
-    if($('#gmap').length){
-    
-      var map;
-      var mapstyles = [ { "stylers": [ { "saturation": -100 } ] } ];
-      
-      var infoWindow = new google.maps.InfoWindow;
-      
-      var pointLatLng = new google.maps.LatLng(mapPoint.lat, mapPoint.lng);
-  
-      var mapOptions = {
-        zoom: mapPoint.zoom,
-        center: pointLatLng,
-        zoomControl : true,
-        panControl : false,
-        streetViewControl : false,
-        mapTypeControl: false,
-        overviewMapControl: false,
-        scrollwheel: false,
-        styles: mapstyles
-      }
-      
-      map = new google.maps.Map(document.getElementById("gmap"), mapOptions);
-      
-      var marker = new google.maps.Marker({
-        position: pointLatLng, 
-        map: map, 
-        title:mapPoint.linkText,
-        icon: mapPoint.icon
-      });
-      
-      var mapLink = 'https://www.google.com/maps/preview?ll='+mapPoint.lat+','+mapPoint.lng+'&z=14&q='+mapPoint.mapAddress;
-      
-      var html = '<div class="infowin">'
-          + mapPoint.infoText
-          + '<a href="'+mapLink+'" target="_blank">'+mapPoint.linkText+'</a>'
-          + '</div>';
-  
-      google.maps.event.addListener(marker, 'mouseover', function() {
-        infoWindow.setContent(html);
-        infoWindow.open(map, marker);
-      });
-  
-      google.maps.event.addListener(marker, 'click', function() {
-        window.open(mapLink,'_blank');
-      });
-      
-    }
+    function loadGmap() {
+
+        if ($('#gmap').length) {
+
+            var map;
+            var mapstyles = [{ "stylers": [{ "saturation": -100 }] }];
+
+            var infoWindow = new google.maps.InfoWindow;
+
+            var pointLatLng = new google.maps.LatLng(mapPoint.lat, mapPoint.lng);
+
+            var mapOptions = {
+                zoom: mapPoint.zoom,
+                center: pointLatLng,
+                zoomControl: true,
+                panControl: false,
+                streetViewControl: false,
+                mapTypeControl: false,
+                overviewMapControl: false,
+                scrollwheel: false,
+                styles: mapstyles
+            }
+
+            map = new google.maps.Map(document.getElementById("gmap"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: pointLatLng,
+                map: map,
+                title: mapPoint.linkText,
+                icon: mapPoint.icon
+            });
+
+            var mapLink = 'https://www.google.com/maps/preview?ll=' + mapPoint.lat + ',' + mapPoint.lng + '&z=14&q=' + mapPoint.mapAddress;
+
+            var html = '<div class="infowin">'
+                + mapPoint.infoText
+                + '<a href="' + mapLink + '" target="_blank">' + mapPoint.linkText + '</a>'
+                + '</div>';
+
+            google.maps.event.addListener(marker, 'mouseover', function () {
+                infoWindow.setContent(html);
+                infoWindow.open(map, marker);
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                window.open(mapLink, '_blank');
+            });
+
+        }
     }
     /*============================================
     Waypoints Animations
     ==============================================*/
-    $('#skills').waypoint(function(){
-    
-      $('.skills-item').each(function(){
-        $(this).css({'height':$(this).data('height')+'%'});
-      })
-      
-      $('.skills-bars').css({'opacity':1});
-      
-    },{offset:'40%'});
-    
-    $('.scrollimation').waypoint(function(){
-      $(this).addClass('in');
-    },{offset:'90%'});
-    
+    $('#skills').waypoint(function () {
+
+        $('.skills-item').each(function () {
+            $(this).css({ 'height': $(this).data('height') + '%' });
+        })
+
+        $('.skills-bars').css({ 'opacity': 1 });
+
+    }, { offset: '40%' });
+
+    $('.scrollimation').waypoint(function () {
+        $(this).addClass('in');
+    }, { offset: '90%' });
+
     /*============================================
     Resize Functions
     ==============================================*/
     var thumbSize = $('.project-item').width();
-    
-    $(window).resize(function(){
-      $('#home').height($(window).height()+50);
-      
-      if($('.project-item').width() != thumbSize){
-      
-        $('#projects-container').masonry('reload');
-        thumbSize = $('.project-item').width();
-      }
-      
-      scrollSpyRefresh();
-      waypointsRefresh();
+
+    $(window).resize(function () {
+        $('#home').height($(window).height() + 50);
+
+        if ($('.project-item').width() != thumbSize) {
+
+            $('#projects-container').masonry('reload');
+            thumbSize = $('.project-item').width();
+        }
+
+        scrollSpyRefresh();
+        waypointsRefresh();
     });
-    
+
     /*============================================
     Refresh scrollSpy function
     ==============================================*/
-    function scrollSpyRefresh(){
-      setTimeout(function(){
-        $('body').scrollspy('refresh');
-      },1000);
+    function scrollSpyRefresh() {
+        setTimeout(function () {
+            $('body').scrollspy('refresh');
+        }, 1000);
     }
-    
+
     /*============================================
     Refresh waypoints function
     ==============================================*/
-    function waypointsRefresh(){
-      setTimeout(function(){
-        $.waypoints('refresh');
-      },1000);
+    function waypointsRefresh() {
+        setTimeout(function () {
+            $.waypoints('refresh');
+        }, 1000);
     }
-  });
-  
-  $(document).ready(function() {
-    $('#contact-form').submit(function() {
-      
-      var buttonCopy = $('#contact-form button').html(),
-        errorMessage = $('#contact-form button').data('error-message'),
-        sendingMessage = $('#contact-form button').data('sending-message'),
-        okMessage = $('#contact-form button').data('ok-message'),
-        hasError = false;
-      
-      $('#contact-form .error-message').remove();
-      
-      $('.requiredField').each(function() {
-        if($.trim($(this).val()) == '') {
-          var errorText = $(this).data('error-empty');
-          $(this).parent().append('<span class="error-message" style="display:none;">'+errorText+'.</span>').find('.error-message').fadeIn('fast');
-          $(this).addClass('inputError');
-          hasError = true;
-        } else if($(this).is("input[type='email']") || $(this).attr('name')==='email') {
-          var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-          if(!emailReg.test($.trim($(this).val()))) {
-            var invalidEmail = $(this).data('error-invalid');
-            $(this).parent().append('<span class="error-message" style="display:none;">'+invalidEmail+'.</span>').find('.error-message').fadeIn('fast');
-            $(this).addClass('inputError');
-            hasError = true;
-          }
-        }
-      });
-      
-      if(hasError) {
-        $('#contact-form button').html('<i class="fa fa-times"></i>'+errorMessage);
-        setTimeout(function(){
-          $('#contact-form button').html(buttonCopy);
-        },2000);
-      }
-      else {
-        $('#contact-form button').html('<i class="fa fa-spinner fa-spin"></i>'+sendingMessage);
-        
-        var formInput = $(this).serialize();
-        $.post($(this).attr('action'),formInput, function(data){
-          $('#contact-form button').html('<i class="fa fa-check"></i>'+okMessage);
-          
-          $('#contact-form')[0].reset();
-          
-          setTimeout(function(){
-            $('#contact-form button').html(buttonCopy);
-          },2000);
-          
+});
+
+$(document).ready(function () {
+    $('#contact-form').submit(function () {
+
+        var buttonCopy = $('#contact-form button').html(),
+            errorMessage = $('#contact-form button').data('error-message'),
+            sendingMessage = $('#contact-form button').data('sending-message'),
+            okMessage = $('#contact-form button').data('ok-message'),
+            hasError = false;
+
+        $('#contact-form .error-message').remove();
+
+        $('.requiredField').each(function () {
+            if ($.trim($(this).val()) == '') {
+                var errorText = $(this).data('error-empty');
+                $(this).parent().append('<span class="error-message" style="display:none;">' + errorText + '.</span>').find('.error-message').fadeIn('fast');
+                $(this).addClass('inputError');
+                hasError = true;
+            } else if ($(this).is("input[type='email']") || $(this).attr('name') === 'email') {
+                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                if (!emailReg.test($.trim($(this).val()))) {
+                    var invalidEmail = $(this).data('error-invalid');
+                    $(this).parent().append('<span class="error-message" style="display:none;">' + invalidEmail + '.</span>').find('.error-message').fadeIn('fast');
+                    $(this).addClass('inputError');
+                    hasError = true;
+                }
+            }
         });
-      }
-      
-      return false; 
+
+        if (hasError) {
+            $('#contact-form button').html('<i class="fa fa-times"></i>' + errorMessage);
+            setTimeout(function () {
+                $('#contact-form button').html(buttonCopy);
+            }, 2000);
+        }
+        else {
+            $('#contact-form button').html('<i class="fa fa-spinner fa-spin"></i>' + sendingMessage);
+
+            var formInput = $(this).serialize();
+            $.post($(this).attr('action'), formInput, function (data) {
+                $('#contact-form button').html('<i class="fa fa-check"></i>' + okMessage);
+
+                $('#contact-form')[0].reset();
+
+                setTimeout(function () {
+                    $('#contact-form button').html(buttonCopy);
+                }, 2000);
+
+            });
+        }
+
+        return false;
     });
-  });
-  /* end of script for appointment form */
+});
+/* end of script for appointment form */
