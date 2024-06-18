@@ -258,12 +258,12 @@ a:hover {
 
 /*Book and appointment styling start*/
 a{
-  color:#f9398c;
+  color:black;
   text-decoration:none
 }
 
 a:hover,a:focus{
-  color:#f9398c;
+  color:orange;
   text-decoration:underline
 }
 
@@ -633,5 +633,9 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
   font-style: italic; 
 }
 
-
-  
+body.products{
+  background-image:url(newproductspg.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: keeps the background fixed while scrolling */
+}
