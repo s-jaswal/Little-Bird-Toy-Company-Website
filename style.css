@@ -146,8 +146,12 @@ h1 {
 }
 
 img {
-  max-width: 100%; /* This limits the image size to its container */
+  max-width: 100%; /* Limits the image size to its container width */
   height: auto; /* Ensures the image keeps its aspect ratio */
+  display: block; /* Ensures the image behaves like a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-height: 100%; /* Ensures the image does not exceed the container height */
+  
 }
 
 /* Style for the contact us section */
@@ -628,3 +632,6 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
   color:rgb(211, 147, 29);
   font-style: italic; 
 }
+
+
+  
